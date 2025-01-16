@@ -4,6 +4,8 @@ let pos3 = 0;
 let pos4 = 0;
 let pos5 = 0;
 let pos6 = 0;
+let pos7 = 0;
+let pos8 = 0;
 
 function setup() {
   createCanvas(400, 400);
@@ -21,6 +23,10 @@ function draw() {
   const radius = width * 0.3;
   ellipse(0, 0, radius*2, radius*2);
 
+  fill(240, 140, 20);
+  let x7 = cos(radians(pos8)) * radius;
+  let y7 = sin(radians(pos8)) * radius;
+  ellipse(x7, y7, 70, 70);
 
   fill(250, 0, 250);
   let x5 = cos(radians(pos6)) * radius;
@@ -52,15 +58,21 @@ function draw() {
   let y1 = sin(radians(pos2)) * radius;
   ellipse(x1, y1, 15, 15);
 
+  fill(0, 250, 250);
+  let x6 = cos(radians(pos7)) * radius;
+  let y6 = sin(radians(pos7)) * radius;
+  ellipse(x6, y6, 10, 10);
+  
 
 
-
+  pos8 = pos8 + 0.5;
+  pos6 = pos6 + 0.75;
   pos1 = pos1 + 1;
-  pos2 = pos2 + 2;
+  pos5 = pos5 + 1.25;
   pos3 = pos3 + 1.5;
   pos4 = pos4 + 1.75;
-  pos5 = pos5 + 1.25;
-  pos6 = pos6 + 0.75;
+  pos2 = pos2 + 2;
+  pos7 = pos7 + 2.25;
   print(pos1);
 
 }
